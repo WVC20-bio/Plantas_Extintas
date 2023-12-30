@@ -31,7 +31,7 @@ threats <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/ti
 
 ### Datos de Sudamérica
 
-Las especies totales de Sudamérica es `r plants %>% dplyr::filter(continent == "South America") %>% nrow ()`  especies 
+Las especies totales de Sudamérica en la base de datos es `r plants %>% dplyr::filter(continent == "South America") %>% nrow ()`  especies 
 
 
 
