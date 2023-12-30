@@ -1,0 +1,39 @@
+---
+title: "Exploración_plantas_extintas"
+author: "William Vilchez Cruz"
+date: '2023-12-30'
+---
+
+
+```{r setup, include= FALSE}
+knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE)
+library(tidyverse)
+
+library(kableExtra)
+
+library(dplyr)
+```
+
+
+# Practicando con Rmarkdown
+
+### Utilizaremos datos de plantas extintas 
+
+Estos datos sobre plantas extintas son datos de la **IUCN**, y se obtuvieron del [siguiente repositiorio ](https://github.com/rfordatascience/tidytuesday) de GitHub
+
+
+```{r, echo= T, message= F, warning=FALSE}
+plants <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2020/2020-08-18/plants.csv')
+actions <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2020/2020-08-18/actions.csv')
+threats <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2020/2020-08-18/threats.csv')
+
+```
+
+### Datos de Sudamérica
+
+Las especies totales de Sudamérica es `r plants %>% dplyr::filter(continent == "South America") %>% nrow ()`  especies 
+
+
+
+
+
